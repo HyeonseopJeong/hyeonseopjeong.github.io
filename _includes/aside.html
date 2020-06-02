@@ -1,31 +1,12 @@
-{% if page.bg %}
-  <aside class="sidebar" role="note" style="background-image: url({{ site.images | relative_url }}/{{ page.bg }})">
-{% else %}
-  <aside class="sidebar" role="note" style="background-image: url({{ site.images | relative_url }}/bg.svg)">
-{% endif %}
 
+<aside class="sidebar" role="note" style="background-image: url({{ site.images | relative_url }}/bg.svg)">
   <div class="cover">
-    <!--아직 아바타 추가 안 함.-->
-    {% if author.avatar %}
-      <a href="{{ site.url }}/">
-        <img src="{{ site.url }}/img/{{ author.avatar }}" alt="" class="avatar">
-      </a>
-    {% endif %}
-    <a href="{{ site.url }}/" class="author_name">{{ site.name }}</a>
-    <span class="author_job">{{ site.job }}</span>
-
     <div class="cover-text">
       <div class="heading">
-        {% if page.tags %}
-          {{ page.title }}
-        {% endif %}
+        <p><a href="{{ site.url }}/">{{ site.name }}</a></p>
+        <p>{{ site.job }}</p>
+        <p><a href="https://github.com/{{ site.github_username }}/">Github</p>
       </div>
-      <p>
-        {% if page.summary %}
-          {{ page.summary }}
-        {% endif %}
-      </p>
-
     </div>
 
   </div>
