@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What Is Bits"
-crawlertitle: "Bits"
+crawlertitle: "About Bits"
 summary: "Bits가 무엇인지 설명하겠습니다."
 date: 2020-06-02T18:23:43+09:00
 categories: CS
