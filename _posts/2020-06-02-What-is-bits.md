@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "What Is Bits"
+title: "Bits란?"
 crawlertitle: "About Bits"
-summary: "Bits가 무엇인지 설명하겠습니다."
+summary: "Bits가 무엇이고 어떻게 활용되는지 설명하겠습니다."
 date: 2020-06-02T18:23:43+09:00
 categories: CS
 tags: "whatis"
