@@ -1,11 +1,11 @@
 ---
 bg: "tag.jpg"
 layout: page
-permalink: /posts/
-title: "Archive"
-crawlertitle: "All articles"
-summary: "Posts about jekyll"
-active: archive
+permalink: /tags/
+title: "Tags"
+crawlertitle: "All tags"
+summary: "View all tags"
+active: Tags
 ---
 
 {% for tag in site.tags %}
