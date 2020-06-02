@@ -1,13 +1,6 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: JHS blog
-email: 21600665@handong.edu
+title: 이왕하는거 잘하자.
 description: > # this means to ignore newlines until "baseurl:"
   2020년도 하반기부터 공부한 내용을 정리하기 위해 만든 블로그입니다.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -40,3 +33,41 @@ sass:
 
 
 images: '/assets/images'
+
+owner:
+  name: Hyeonseop Jeong
+  #avatar: leonids-logo.png
+  job: "CS Undergraduate at Handong Global University"
+  bio:
+  email: "21600665@handong.edu"
+  disqus-shortname: 
+  twitter: #username
+  facebook: #username
+  google:
+    plus: #username
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: HyeonseopJeong
+  gitlab: #username
+  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  linkedin: #username
+  skype: #username
+  xing: #username
+  instagram:  #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+  500px: #username
+  codepen: #username
+  reddit: #username
+  telegram: #username
