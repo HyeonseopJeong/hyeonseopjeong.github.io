@@ -6,6 +6,7 @@ summary: "Bits가 무엇인지 설명하겠습니다."
 date: 2020-06-02T18:23:43+09:00
 categories: CS
 tags: "whatis"
+author: "Hyeonseop Jeong"
 ---
 ## Bits ?
 
