@@ -24,11 +24,7 @@ layout: default
             <div class="text-warp">
               <h3 class="title">{{ post.title }}</h3>
               <p class="excerpt">
-                {% if post.excerpt.size > 50 %}
-                {{ post.excerpt | strip_html | strip_newlines | truncatewords: 25, '...' }}
-                {% else %}
-                {{ post.subtitle }}
-                {% endif %}
+                {{ post.description }}
               </p>
               <div>
                 <span class="meta">

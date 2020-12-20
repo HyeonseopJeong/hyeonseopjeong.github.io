@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+    integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
+  <!-- Spoqa Han Sans -->
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- OG Tag -->
+  
+  <meta name="title" content="공부 기록용 블로그-웹 서버의 패스워드 관리 법" />
+  <meta name="author" content="Hyeonseop Jeong" />
+  <meta name="keywords" content="TIL,웹 서버" />
+  <meta name="description" content="" />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:title" content="공부 기록용 블로그-웹 서버의 패스워드 관리 법" />
+  <meta property="og:description" content="" />
+  <meta property="og:type" content="website, blog" />
+  <meta property="og:image"
+    content="https://hyeonseopjeong.github.io/assets/img/smile.png" />
+  <meta property="og:site_name" content="공부 기록용 블로그" />
+  <meta property="og:url" content="https://hyeonseopjeong.github.io/2020/12/20/TIL.html" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="공부 기록용 블로그-웹 서버의 패스워드 관리 법" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:image"
+    content="https://hyeonseopjeong.github.io/assets/img/smile.png" />
+
+  <title>공부 기록용 블로그-웹 서버의 패스워드 관리 법</title>
+</head>
+<body>
+  <div class="container">
+    
+
+<header>
+  <nav>
+    <ul>
+      
+      <!-- others -->
+      <a href="https://hyeonseopjeong.github.io">
+        <li class="current btn-nav">Blog</li>
+      </a>
+      <a href="https://hyeonseopjeong.github.io/tags">
+        <li class="btn-nav">Tags</li>
+      </a>
+      <a href="https://hyeonseopjeong.github.io/portfolio">
+        <li class="btn-nav">Portfolio</li>
+      </a>
+      
+    </ul>
+  </nav>
+</header>
+<div id="post">
+  <section class="post-header">
+    <h1 class="title">웹 서버의 패스워드 관리 법</h1>
+    <p class="subtitle"></p>
+    <p class="meta">
+      December 20, 2020
+    </p>
+  </section>
+  <section class="post-content">
+    <h1 id="웹-서버가-유저의-비밀번호를-관리하는-방식">웹 서버가 유저의 비밀번호를 관리하는 방식</h1>
+<ul>
+  <li>서버가 db에 유저의 비밀번호를 그냥 쑤셔 넣으면 당연히 문제가 생길 것이다.</li>
+  <li>
+    <p>서버 db를 해킹당하면 유저의 비밀번호가 다 털리게 된다. 근데 그 전에 db관리자가 유저의 패스워드를 그냥 열어 볼 수도 있다.</p>
+  </li>
+  <li>
+    <p>그래서 서버는 유저의 비밀번호를 <code class="language-plaintext highlighter-rouge">해시</code>해서 저장한다.
+해시는 해시 함수를 이용해서 값을 단방향으로 암호화 시켜준다. (단방향이라는 말은 복호화가 안된다는 뜻이다.)</p>
+  </li>
+  <li>
+    <p>근데 이 해시를 그냥 사용하면 두 유저가 비밀번호가 같으면 digest(해시 함수로 나온 값)도 같아서 비밀번호가 유추 가능해진다.</p>
+  </li>
+  <li>그래서 사용자의 패스워드에다가 임의의 값을 붙여서 Hash funtion에 넣는 방식인 <code class="language-plaintext highlighter-rouge">Salting</code>을 이용해 두 유저의 비밀번호가 같더라도 나오는 digest가 다르게 하고 또한 db가 털려서 유저들의 비밀번호 digest가 털려도 rainbow attack 등을 할 수 없게 된다.</li>
+</ul>
+
+<blockquote>
+  <p>rainbow attack은 rainbow table에 해킹해온 유저의 digest를 대입해서 passward를 알아내는 방식이다.</p>
+</blockquote>
+
+<blockquote>
+  <p>salt는 최소 128bit 정도는 돼야 안전하다고 한다.</p>
+</blockquote>
+
+<ul>
+  <li>이 정도 (hash + salting)하면 웹 서버에서 비밀번호를 안전하게 저장하고 있다고 말할 수 있다.</li>
+</ul>
+
+<h2 id="결론">결론</h2>
+<p>그냥 구글, 카카오, 네이버의 로그인 API를 달자.</p>
+
+
+  </section>
+</div>
+
+<div id="top" class="top-btn" onclick="moveTop()">
+  <i class="fas fa-chevron-up"></i>
+</div>
+
+<!-- Disqus -->
+
+
+<!-- Footer -->
+<footer>
+  <div class="footer">
+    Copyright © 2019
+    <a href="https://github.com/NAYE0NG">Nayeong Kim</a>.
+    Powered by Jekyll with
+    <a href="https://github.com/naye0ng/Grape-Theme">Grape Theme</a>.
+  </div>
+</footer>
+
+
+<script>
+  var lastScrollTop = 0;
+  window.onscroll = function () {
+    var st = document.body.scrollTop || document.documentElement.scrollTop;
+    if (st > 250) {
+      document.getElementById("top").style.display = "block"
+      if (st > lastScrollTop) {
+        document.getElementById("top").style.opacity = 0
+      } else {
+        document.getElementById("top").style.opacity = 1
+      }
+    } else {
+      document.getElementById("top").style.opacity = 0
+      if (st > lastScrollTop) {
+        document.getElementById("top").style.display = "none"
+      }
+    }
+    lastScrollTop = st <= 0 ? 0 : st;
+  }
+  function moveTop() {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+  }
+</script>
+  </div>
+</body>
+
+</html>
