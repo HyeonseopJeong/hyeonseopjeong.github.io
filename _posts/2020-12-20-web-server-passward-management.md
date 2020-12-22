@@ -2,7 +2,7 @@
 layout: post
 title: 웹 서버의 패스워드 관리 법
 description: Hash, Salting
-tags: [TIL, 웹 서버]
+tags: [웹 서버]
 author: Hyeonseop Jeong
 comments : True
 ---
