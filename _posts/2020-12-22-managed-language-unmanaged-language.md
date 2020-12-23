@@ -30,7 +30,6 @@ Managed code로 컴파일되는 언어들은 그 언어가 Machine에서 바로 
 
 
 ---
-아 쓰고보니까 왜이리 두서없지?
 
 1. Unmanaged Language (C, C++, Rust)
 2. managed language (Java, C#)
