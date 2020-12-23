@@ -1,0 +1,54 @@
+# Site Settings
+baseurl: ""
+url : "https://hyeonseopjeong.github.io"
+
+# Blog Settings
+theme_settings :
+  title : 공부 기록용 블로그
+  favicon : assets/favicon.ico
+
+  # Profile Settings
+  profile :
+    image : assets/img/smile.png
+    username : Hyeonseop Jeong
+    description : 컴퓨터 공학과 학부생.
+    experience :
+      - start : 2016-03
+        end : On Going
+        experience : Handong Global University
+        Description: 전산전자공학부 컴퓨터공학심화 전공
+    skills : 
+      - skill : HTML5 & CSS
+        value : 85  # Percent value
+      - skill : javascript
+        value : 25
+      - skill : C & C++
+        value : 75
+        
+  # Icons
+  icons :
+    email:  gustjq1101@naver.com # Full email address, e.g. "sample@google.com"
+    linkedin:  # Full URL 
+    github: HyeonseopJeong
+    gitlab: 
+    bitbucket: 
+    google_plus:
+    twitter:
+    youtube:
+    facebook:
+    instagram:
+
+  # Disqus
+  disqus_shortname :
+
+# Pagination
+paginate: 5
+paginate_path: "blog/page:num"
+
+# Build Ssttings
+sass:
+  sass_dir: _sass
+  style: :compressed
+gems: [jekyll-paginate]
+bootstrap:
+  assets: true
